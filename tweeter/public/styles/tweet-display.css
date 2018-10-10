@@ -61,4 +61,6 @@
 
 .tweet-container:hover {
   opacity: 1.0;
+  border: 2px solid;
+  border-color: black;
 }
