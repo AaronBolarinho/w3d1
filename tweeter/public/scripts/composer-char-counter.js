@@ -14,10 +14,3 @@ $(document).ready(function() {
 
 
 // Add listener
- // '#charCounter'.addEventListener('keypress', callback);
-
-
- // $("#charCounter").css("color", "red");
- //      } else {
- //        $("#charCounter").css("color", "black");
- //      };
