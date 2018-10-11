@@ -23,24 +23,7 @@
     </script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js">
     </script>
-    <script>
-      $(function() {
-          var $form = $('#newTweetForm');
-
-          $form.on("submit", function(event) {
-            var formContent = $(this).serialize();
-            event.preventDefault();
-
-            if (formContent === "") {
-              alert('You forgot to add your tweet!')
-            } else {
-              $.post( "/tweets", formContent ).done(function() {
-              console.log("Data Loaded: " + formContent);
-              loadTweets();
-              })
-            }
-          });
-        });
+    <script type="text/javascript" src="/scripts/form-validation.js">
     </script>
   </head>
 
@@ -50,6 +33,7 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+        <input id="composeTweet" type="submit" value="Compose">
     </nav>
 
     <!-- Page-specific (main) content here -->

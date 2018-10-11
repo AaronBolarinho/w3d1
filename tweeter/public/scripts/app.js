@@ -12,7 +12,7 @@
                   <span class="tweeter-name"> ${tweet.user.name}</span>
                   <span class="tweeter-handle"> ${tweet.user.handle}</span>
                  </header>
-                <p>${tweet.content.text}</p>
+                <p>${escape(tweet.content.text)}</p>
                 <footer>
                   <span class="last-tweeted">${tweet.created_at}</span>
                 </footer>
@@ -30,13 +30,26 @@ function renderTweets(tweets) {
 function loadTweets(tweets) {
     $.ajax('/tweets', { method: 'GET' }).done(function(data) {
       console.log("render tweets", data);
-      renderTweets(data);
+      renderTweets(data.reverse());
     })
+  }
+
+  function escape(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   }
 
 $(document).ready(function() {
 
  loadTweets();
- // renderTweets(data);
+
+ $("#composeTweet").click(function(){
+    $(".new-tweet").slideToggle("slow");
+  });
+
+ $( "#composeTweet").click(function() {
+    $( "#tweeterText" ).select();
+  });
 
 });
