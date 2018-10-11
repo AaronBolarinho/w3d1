@@ -11,7 +11,5 @@ $(document).ready(function() {
   });
 });
 
-
-
 // Add listener
 
