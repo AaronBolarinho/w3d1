@@ -8,7 +8,7 @@
 
       return $(`<article class="tweet">
                 <header class="tweet-header">
-                <img src="https://shawglobalnews.files.wordpress.com/2018/05/gettyimages-860271678.jpg?quality=70&strip=all&w=720" alt="Temporary image">
+                <img src=${tweet.user.avatars.small}>
                   <span class="tweeter-name"> ${tweet.user.name}</span>
                   <span class="tweeter-handle"> ${tweet.user.handle}</span>
                  </header>
