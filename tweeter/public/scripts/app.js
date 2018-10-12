@@ -52,5 +52,7 @@ $(document).ready(function() {
     $( "#tweeterText" ).select();
   });
 
- $("#tweetError").hide();
+ $("#tweetErrorOverfill").hide();
+
+ $("#tweetErrorUnderfill").hide();
 });

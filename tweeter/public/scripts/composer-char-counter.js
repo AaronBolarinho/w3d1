@@ -9,19 +9,6 @@ function characterCounter() {
     }
 }
 
-// function formSubmit(event) {
-//   event.preventDefault();
-
-//   const errors = validateForm()
-
-//   if (errors)
-//   if (validateForm()) {
-//     // do post
-//   } else {
-//     display error
-//   }
-// }
-
 $(document).ready(function() {
   $( "#tweeterText" ).on( "input", characterCounter)
 });

@@ -9,12 +9,22 @@ $(document).ready(function() {
               var formContent = $(this).serialize();
               event.preventDefault();
 
-               if(count === 0 || count > 140) {
+               if(count === 0) {
 
-                $("#tweetError").slideToggle(0.2)
+                $("#tweetErrorUnderfill").slideToggle(0.2)
 
                 setTimeout(function(){
-                  $("#tweetError").slideToggle(0.2)
+                  $("#tweetErrorUnderfill").slideToggle(0.2)
+                  }, 5000);
+
+                return false;
+
+               } else if(count > 140) {
+
+                $("#tweetErrorOverfill").slideToggle(0.2)
+
+                setTimeout(function(){
+                  $("#tweetErrorOverfill").slideToggle(0.2)
                   }, 5000);
 
                 return false;

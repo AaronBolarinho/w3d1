@@ -42,7 +42,8 @@
         <h2>Compose Tweet</h2>
         <form id="newTweetForm" action="/tweets" method="POST">
           <textarea id="tweeterText" name="text" placeholder="What are you humming about?"></textarea>
-          <span id="tweetError" hidden> This is our alert!</span>
+          <span id="tweetErrorOverfill" hidden> Error! Your tweet has too many characters. </span>
+          <span id="tweetErrorUnderfill" hidden> Error! You have not added any message! </span>
           <input id="postTweet" type="submit" value="Tweet">
           <span id="charCounter" class="counter">140</span>
         </form>
