@@ -45,11 +45,12 @@ $(document).ready(function() {
  loadTweets();
 
  $("#composeTweet").click(function(){
-    $(".new-tweet").slideToggle("slow");
+    $(".new-tweet").slideToggle(50.5);
   });
 
- $( "#composeTweet").click(function() {
+ $("#composeTweet").click(function() {
     $( "#tweeterText" ).select();
   });
 
+ $("#tweetError").hide();
 });

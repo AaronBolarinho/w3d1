@@ -9,24 +9,39 @@ $(document).ready(function() {
               var formContent = $(this).serialize();
               event.preventDefault();
 
-               if(count === 0) {
-                alert('You forgot to add your tweet!')
-              } else if (count > 140) {
-                  alert("Your Tweet has too many characters!");
-                  return false;
+               if(count === 0 || count > 140) {
+
+                $("#tweetError").slideToggle(0.2)
+
+                setTimeout(function(){
+                  $("#tweetError").slideToggle(0.2)
+                  }, 5000);
+
+                return false;
+
               } else {
-                  $.post( "/tweets", formContent ).done(function() {
-                  console.log("Data Loaded: " + formContent);
-                  loadTweets();
-                  })
-                }
+
+                $.post( "/tweets", formContent ).done(function() {
+                console.log("Data Loaded: " + formContent);
+                loadTweets();
+                })
+
+              }
+
             });
 });
 
-
-
-
-
+// if(count === 0) {
+//                 alert('You forgot to add your tweet!')
+//               } else if (count > 140) {
+//                   alert("Your Tweet has too many characters!");
+//                   return false;
+//               } else {
+//                   $.post( "/tweets", formContent ).done(function() {
+//                   console.log("Data Loaded: " + formContent);
+//                   loadTweets();
+//                   })
+//                 }
 
 //   $( "#newTweetForm" ).click(function() {
 //     var count = $("#tweeterText").val().length

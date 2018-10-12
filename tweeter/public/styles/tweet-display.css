@@ -21,10 +21,9 @@
 .tweet header img{
   border-color: #D3D3D3;
   background-color:#eee;
-  width: 80px;
-  height: 80px;
+
   border-radius: 5px;
-  margin: 10px 10px;
+  margin: 20px 20px;
 }
 
 .tweeter-name {
@@ -32,7 +31,7 @@
   background-color:#eee;
   font: bold 25px 'Roboto Condensed', sans-serif;
   flex-grow: 1;
-  margin-top: 10px;
+  margin-top: 17px;
 }
 
 .tweeter-handle {
@@ -52,16 +51,14 @@
 }
 
 .tweet p{
-  height: 80px;
   margin-bottom: 0px;
   margin-top: 0px;
-  line-height: 5;
   display: flex;
-  padding-left: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .tweet:hover {
   opacity: 1.0;
-  border: 2px solid;
-  border-color: black;
 }
